@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "742733009053",
+    "firebase_url": "https://eventdatabasemondragon.firebaseio.com",
+    "project_id": "eventdatabasemondragon",
+    "storage_bucket": "eventdatabasemondragon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742733009053:android:eaf8809231a6dbe2c04474",
+        "android_client_info": {
+          "package_name": "com.example.firebaseexampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742733009053-qvkpqqc0ehj0a896l5gna66sc814n98r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDObkhti62uL54vQ36_4N4DpMV0SiRBPQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742733009053-qvkpqqc0ehj0a896l5gna66sc814n98r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
