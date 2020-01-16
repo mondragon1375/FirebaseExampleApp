@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class EditEventActivity extends AppCompatActivity {
     private FirebaseDatabaseHelper dbHelper;
-    private EditText eventNameET;
+    private EditText eventNameET, eventDateDayET, eventDateMonthET, eventDateYearET;
     private EditText eventDateET;
     private String keyToUpdate;
 
@@ -28,9 +28,16 @@ public class EditEventActivity extends AppCompatActivity {
         keyToUpdate = event.getKey();
 
         eventNameET = (EditText)findViewById(R.id.eventName);
-        eventDateET = (EditText)findViewById(R.id.eventDate);
+        eventDateDayET = (EditText) findViewById(R.id.eventDateDay);
+        eventDateMonthET = (EditText)findViewById(R.id.eventDateMonth);
+        eventDateYearET = (EditText)findViewById(R.id.eventDateYear);
 
         eventNameET.setText(eventNameToUpdate);
+
+        //int m = Integer.parseInt(newDate.substring(0, 2));
+        //int day =  Integer.parseInt(newDate.substring(3, 5));
+        //int year =  Integer.parseInt(newDate.substring(6));
+
         eventDateET.setText(eventDateToUpdate);
     }
 
@@ -51,8 +58,8 @@ public class EditEventActivity extends AppCompatActivity {
                 int day =  Integer.parseInt(newDate.substring(3, 5));
                 int year =  Integer.parseInt(newDate.substring(6));
 
-                if (month > 0 && month < 13 && day > 0 && day < 32 )
-                    dbHelper.updateEvent(keyToUpdate, newName, newDate, month, day, year);
+                    if (month > 0 && month < 13 && day > 0 && day < 32 )
+                        dbHelper.updateEvent(keyToUpdate, newName, newDate, month, day, year);
                 else
                     Toast.makeText(EditEventActivity.this, "Please enter a valid month/day", Toast.LENGTH_SHORT).show();
 

@@ -1,61 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditEventActivity"
     android:orientation="vertical">
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView"
         android:text="Update/Delete an Event"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        />
+        android:textSize="30sp"/>
+
     <EditText
         android:id="@+id/eventName"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="40dp"
         android:hint="Name of event to edit"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
     <EditText
         android:id="@+id/eventDate"
+        android:hint="Time of date to edit"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="40dp"
-        android:hint="Date of event to edit"
-        />
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/editButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
         android:text="Save Event Data"
-        android:onClick="updateEventData"
-        android:layout_gravity="center" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:onClick="updateEventData"/>
+
     <Button
         android:id="@+id/deleteButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete this Event"
+        android:layout_gravity="center"
         android:onClick="deleteEventData"
-        android:layout_gravity="center" />
+        android:text="Delete this Event"
+        app:layout_constraintTop_toBottomOf="@+id/editButton"
+        tools:layout_editor_absoluteX="-16dp" />
+
     <Button
         android:id="@+id/showAllButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show All Events"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:onClick="onRetrieve"
-        android:layout_gravity="center" />
+        android:text="Show All Events"
+        app:layout_constraintTop_toBottomOf="@+id/deleteButton"
+        tools:layout_editor_absoluteX="0dp" />
+
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Screen"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:onClick="onHome"
-        android:layout_gravity="center" />
+        android:text="Home Screen"
+        app:layout_constraintTop_toBottomOf="@+id/showAllButton"
+        tools:layout_editor_absoluteX="-16dp" />
 </LinearLayout>
